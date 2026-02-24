@@ -1,0 +1,73 @@
+.contacto {
+    padding: 60px 20px;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+}
+
+.contacto h2 {
+    margin-bottom: 10px;
+    font-family: "Pacifico", cursive;
+}
+
+.contenedor-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.formulario button {
+    background: #2e8b57;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background: #256f47;
+}
+
+.info-contacto {
+    text-align: left;
+    max-width: 300px;
+}
+.info-contacto h3 {
+     font-family: "Pacifico", cursive;
+}
+    
+.info-contacto i {
+    margin-right: 8px;
+    color: #2e8b57;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 20px;
+    background: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe5d;
+}

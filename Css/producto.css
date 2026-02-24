@@ -1,0 +1,112 @@
+.productos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.productos h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-family: "Borel", cursive;
+}
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  gap: 30px;
+  justify-content: center; /* 👈 centra las tarjetas */
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+}
+
+.card p {
+  font-weight: bold;
+  color: #1e4d4d;
+}
+
+.cantidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  gap: 10px;
+}
+
+.cantidad button {
+  background: #1e4d4d;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cantidad input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-agregar {
+  background: #2e8b57;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-agregar:hover {
+  background: #256f47;
+}
+
+.resumen {
+  margin-top: 60px;
+  padding: 30px;
+  background: #f4f9f8;
+  border-radius: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.resumen h2 {
+  margin-bottom: 20px;
+}
+
+#lista-carrito p {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+#total {
+  color: #1e4d4d;
+  font-weight: bold;
+  font-size: 20px;
+}
