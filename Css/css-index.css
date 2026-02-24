@@ -481,7 +481,7 @@ button:hover {
   padding: 14px 30px;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   transition: all 0.3s ease;
 }
 
@@ -489,6 +489,7 @@ button:hover {
 .btn-whatsapp {
   background: #25D366;
   color: white;
+
 }
 
 .btn-whatsapp:hover {
@@ -500,6 +501,7 @@ button:hover {
 .btn-comprar {
   background: white;
   color: #2e8b57;
+  margin-top: 20px ;
 }
 
 .btn-comprar:hover {
