@@ -106,13 +106,10 @@ h1:hover {
 }
 
 .valores img {
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
-    margin-bottom: -100px;
-    margin-top: -50px;
+   width: 60%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
 }
 
 .menu {
@@ -723,4 +720,18 @@ button:hover {
     .carousel img {
         width: 160px;
     }
+}
+
+@media (max-width: 768px) {
+
+  .poster img {
+    width: 100%;
+    height: auto;
+  }
+
+  .valores img {
+    width: 80%;
+    margin: 20px auto;
+  }
+
 }
