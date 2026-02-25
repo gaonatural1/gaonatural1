@@ -14,6 +14,7 @@ img {
 
 body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 /* ==================================================
@@ -106,7 +107,7 @@ h1:hover {
 }
 
 .valores img {
-   width: 60%;
+    width: 60%;
     max-width: 500px;
     display: block;
     margin: 20px auto;
@@ -178,18 +179,21 @@ h1:hover {
 /* ==================================================
    SECCIÓN INFO
 ================================================== */
+
 .info {
     display: flex;
     background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.1)), url("img/fondo-prueba.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     align-items: center;
+    margin: auto;
     gap: 20px;
     padding: 20px;
     max-width: 100%;
     height: auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .info:hover {
@@ -208,11 +212,11 @@ h1:hover {
 }
 
 .info p {
-    color: #222;
-    font-size: 40px;
-    margin-top: 10px;
-    font-family: "Cormorant Garamond", serif;
     text-align: justify;
+    margin: auto;
+    font-size: 25px;
+    font-family: "Cormorant Garamond", serif;
+
 }
 
 .info2 {
@@ -221,12 +225,14 @@ h1:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     align-items: center;
+    margin: auto;
     gap: 20px;
     padding: 20px;
-    max-width: 100%;
     height: auto;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .info2:hover {
@@ -245,11 +251,15 @@ h1:hover {
 }
 
 .info2 p {
-    color: #222;
-    font-size: 40px;
-    margin-top: 10px;
-    font-family: "Cormorant Garamond", serif;
     text-align: justify;
+    margin: auto;
+    font-size: 25px;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.bienvenida {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* ==================================================
@@ -634,6 +644,7 @@ button:hover {
     .info {
         flex-direction: column;
         text-align: center;
+        padding: 20px 15px;
     }
 
     .info img {
@@ -645,7 +656,7 @@ button:hover {
     }
 
     .info p {
-        font-size: 20px;
+        font-size: 10px;
     }
 
     .carousel img {
@@ -655,6 +666,7 @@ button:hover {
     .info2 {
         flex-direction: column;
         text-align: center;
+        padding: 20px 15px;
     }
 
     .info2 img {
@@ -666,7 +678,7 @@ button:hover {
     }
 
     .info2 p {
-        font-size: 20px;
+        font-size: 10px;
     }
 
     .carousel2 img {
@@ -724,14 +736,71 @@ button:hover {
 
 @media (max-width: 768px) {
 
-  .poster img {
+    .poster img {
+        width: 100%;
+        height: auto;
+    }
+
+    .valores img {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .info {
+        padding: 20px 15px;
+    }
+
+    .info2 {
+        padding: 20px 15px;
+    }
+
+    .bienvenida {
+        max-width: 100%;
+    }
+
+    .info p {
+        font-size: 18px;
+        text-align: left;
+        /* evita problemas de justify */
+    }
+
+    .info2 p {
+        font-size: 18px;
+        text-align: left;
+        /* evita problemas de justify */
+    }
+}
+
+.map-responsive {
+    position: relative;
     width: 100%;
-    height: auto;
-  }
+    padding-bottom: 56.25%;
+    /* proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
 
-  .valores img {
-    width: 80%;
-    margin: 20px auto;
-  }
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
+@media (min-width: 1024px) {
+
+    .info {
+        background-attachment: fixed;
+    }
+
+    .info2 {
+        background-attachment: fixed;
+    }
 }
