@@ -35,10 +35,8 @@ header {
 }
 
 header h2 {
-    padding: 20px 0;
-    margin-right: 700px;
+    padding: 10px 0;
     font-family: "Pacifico", cursive;
-    font-weight: 200;
     font-size: 30px;
 }
 
@@ -84,6 +82,7 @@ h1:hover {
     padding: 15px 40px;
     font-family: "Borel", cursive;
     transition: all 0.3s ease;
+    flex-wrap: wrap;
 }
 
 .navbar:hover {
@@ -93,13 +92,13 @@ h1:hover {
 }
 
 .imagen_principal {
-    background-size: cover;
-    background-position: center;
+    display: flex;
+    justify-content: center;
 }
 
 .imagen_principal img {
-    margin-left: 700px;
-    width: 25%;
+    width: 60%;
+    max-width: 400px;
 }
 
 .logo img {
@@ -184,8 +183,7 @@ h1:hover {
 ================================================== */
 .info {
     display: flex;
-    background:
-        linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.1)), url("img/fondo-prueba.png");
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.1)), url("img/fondo-prueba.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -203,7 +201,8 @@ h1:hover {
 }
 
 .info img {
-    width: 600px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .info h1 {
@@ -218,7 +217,6 @@ h1:hover {
     font-family: "Cormorant Garamond", serif;
     text-align: justify;
 }
-
 
 .info2 {
     display: flex;
@@ -240,7 +238,8 @@ h1:hover {
 }
 
 .info2 img {
-    width: 600px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .info2 h1 {
@@ -249,11 +248,11 @@ h1:hover {
 }
 
 .info2 p {
-    display: flex;
     color: #222;
     font-size: 40px;
     margin-top: 10px;
     font-family: "Cormorant Garamond", serif;
+    text-align: justify;
 }
 
 /* ==================================================
@@ -304,14 +303,62 @@ h1:hover {
     max-width: 100%;
     height: auto;
     font-family: "Pacifico", cursive;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
 }
 
 .beneficios p {
     text-align: center;
-    margin-bottom: 20px;
-    margin-left: 400px;
+    display: flex;
+    gap: 20px;
     font-size: 25px;
     font-family: "Cormorant Garamond", serif;
+}
+
+@media (max-width: 1024px) {
+
+    .beneficios {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .beneficios div {
+        width: 45%;
+    }
+
+    .beneficios p {
+        font-size: 20px;
+    }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+
+    .beneficios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .beneficios div {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .beneficios p {
+        font-size: 18px;
+    }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+
+    .beneficios p {
+        font-size: 16px;
+    }
+
 }
 
 .elegir {
@@ -324,6 +371,12 @@ h1:hover {
     max-width: 100%;
     height: auto;
     font-family: "Pacifico", cursive;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.elegir>div {
+    max-width: 300px;
 }
 
 .elegir h2 {
@@ -365,8 +418,7 @@ h1:hover {
 
 .poster img {
     width: 100%;
-    height: 800px;
-    /* puedes ajustar */
+    height: auto;
     align-items: center;
 }
 
@@ -392,9 +444,10 @@ h1:hover {
     gap: 30px;
 }
 
-.titulo-seccion{
-      margin-top: -25px;
+.titulo-seccion {
+    margin-top: -25px;
 }
+
 .card-compromiso {
     background: white;
     padding: 30px;
@@ -447,66 +500,66 @@ button:hover {
 ================================================== */
 
 .cta-final {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #2e8b57, #3cb371);
-  color: white;
-  text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #2e8b57, #3cb371);
+    color: white;
+    text-align: center;
 }
 
 .cta-contenido {
-  max-width: 800px;
-  margin: auto;
+    max-width: 800px;
+    margin: auto;
 }
 
 .cta-final h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  font-weight: 500;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .cta-final p {
-  margin-bottom: 35px;
-  font-size: 16px;
-  line-height: 1.6;
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 .cta-botones {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .cta-botones a {
-  padding: 14px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 400;
-  transition: all 0.3s ease;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
 }
 
 /* Botón WhatsApp */
 .btn-whatsapp {
-  background: #25D366;
-  color: white;
+    background: #25D366;
+    color: white;
 
 }
 
 .btn-whatsapp:hover {
-  background: #1ebe5d;
-  transform: translateY(-3px);
+    background: #1ebe5d;
+    transform: translateY(-3px);
 }
 
 /* Botón Comprar */
 .btn-comprar {
-  background: white;
-  color: #2e8b57;
-  margin-top: 20px ;
+    background: white;
+    color: #2e8b57;
+    margin-top: 20px;
 }
 
 .btn-comprar:hover {
-  background: #f0f0f0;
-  transform: translateY(-3px);
+    background: #f0f0f0;
+    transform: translateY(-3px);
 }
 
 /* ==================================================
@@ -541,8 +594,7 @@ button:hover {
     font-size: 14px;
     line-height: 1.6;
     text-align: justify;
-    margin-right: 300px;
-    margin-left: 20px;
+    margin: 0;
 }
 
 .social-icons p {
@@ -600,6 +652,27 @@ button:hover {
     }
 
     .carousel img {
+        width: 250px;
+    }
+
+    .info2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info2 img {
+        width: 100%;
+    }
+
+    .info2 h1 {
+        font-size: 32px;
+    }
+
+    .info2 p {
+        font-size: 20px;
+    }
+
+    .carousel2 img {
         width: 250px;
     }
 }
