@@ -187,6 +187,8 @@ h1:hover {
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
+    margin-left: -10px;
+    margin-right: -10px;
     gap: 20px;
     padding: 20px;
     max-width: 100%;
@@ -227,6 +229,8 @@ h1:hover {
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
+    margin-left: -10px;
+    margin-right: -10px;
     gap: 20px;
     padding: 20px;
     height: auto;
