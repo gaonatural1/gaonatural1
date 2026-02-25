@@ -14,6 +14,7 @@ img {
 
 body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 /* ==================================================
@@ -106,7 +107,7 @@ h1:hover {
 }
 
 .valores img {
-   width: 60%;
+    width: 60%;
     max-width: 500px;
     display: block;
     margin: 20px auto;
@@ -191,6 +192,8 @@ h1:hover {
     padding: 20px;
     max-width: 100%;
     height: auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .info:hover {
@@ -215,6 +218,8 @@ h1:hover {
     margin-top: 10px;
     font-family: "Cormorant Garamond", serif;
     text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .info2 {
@@ -227,8 +232,10 @@ h1:hover {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    max-width: 100%;
     height: auto;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .info2:hover {
@@ -253,12 +260,15 @@ h1:hover {
     text-align: justify;
     font-size: 25px;
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .bienvenida {
     max-width: 600px;
     margin: 0 auto;
 }
+
 /* ==================================================
    CARRUSEL
 ================================================== */
@@ -641,6 +651,7 @@ button:hover {
     .info {
         flex-direction: column;
         text-align: center;
+        padding: 20px 15px;
     }
 
     .info img {
@@ -662,6 +673,7 @@ button:hover {
     .info2 {
         flex-direction: column;
         text-align: center;
+        padding: 20px 15px;
     }
 
     .info2 img {
@@ -731,40 +743,60 @@ button:hover {
 
 @media (max-width: 768px) {
 
-  .poster img {
-    width: 100%;
-    height: auto;
-  }
+    .poster img {
+        width: 100%;
+        height: auto;
+    }
 
-  .valores img {
-    width: 80%;
-    margin: 20px auto;
-  }
+    .valores img {
+        width: 80%;
+        margin: 20px auto;
+    }
 
 }
 
 @media (max-width: 768px) {
 
-  .info
-  {
-    padding: 20px 15px;
-  }
-  .info2 {
-    padding: 20px 15px;
-  }
+    .info {
+        padding: 20px 15px;
+    }
 
-  .bienvenida {
-    max-width: 100%;
-  }
+    .info2 {
+        padding: 20px 15px;
+    }
 
-  .info p
-  {
-    font-size: 18px;
-    text-align: left; /* evita problemas de justify */
-  }
+    .bienvenida {
+        max-width: 100%;
+    }
 
-  .info2 p {
-    font-size: 18px;
-    text-align: left; /* evita problemas de justify */
-  }
+    .info p {
+        font-size: 18px;
+        text-align: left;
+        /* evita problemas de justify */
+    }
+
+    .info2 p {
+        font-size: 18px;
+        text-align: left;
+        /* evita problemas de justify */
+    }
+}
+
+.map-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
